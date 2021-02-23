@@ -1,0 +1,200 @@
+﻿<Window x:Class="CateringApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CateringApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanMinimize">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1.7*"/>
+            <RowDefinition Height="1.7*"/>
+            <RowDefinition Height="1.7*"/>
+            <RowDefinition Height="1.7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#dfd3eb" Grid.RowSpan="7"></Border>
+        <Image Source="D:\BillSplitter\resources\Login-icon.png" Grid.RowSpan="7"></Image>
+
+        <ComboBox Grid.Column="1" Grid.Row="0"
+                  HorizontalAlignment="Right" 
+                  IsEditable="True"
+                  SelectedIndex="0"
+                  x:Name="bahasa"
+                  FontFamily="Gotham Bold"
+                  Opacity="0.6" VerticalAlignment="Center" 
+                  FontSize="10" BorderThickness="0" BorderBrush="Transparent" Margin="0,18,13.667,5.333" Height="16" >
+
+            <ComboBoxItem Content="English (USA)"
+                          FontFamily="Gotham Bold"
+                          Opacity="0.6" FontSize="10"
+                          BorderBrush="Transparent" BorderThickness="0"/>
+
+            <ComboBoxItem Content="Indonesia (IND)"
+                          FontFamily="Gotham Bold"
+                          Opacity="0.6" FontSize="10"
+                          BorderBrush="Transparent" BorderThickness="0"/>
+        </ComboBox>
+
+        <TextBlock Text="Sign Up To BillSplitter" Grid.Column="1" Grid.Row="1"
+                   FontFamily="Gotham Bold" FontSize="29" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Foreground="#222222"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,10,0,0">
+            <TextBlock Text="Username" Margin="60,0,0,0"
+                       FontFamily="Gotham Medium"
+                       Opacity="0.5" FontSize="11"/>
+
+            <TextBox BorderBrush="#757575" BorderThickness="1" Margin="60,3,73.667,0" Height="23">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,10,0,0">
+            <TextBlock Text="E-Mail" Margin="60,0,-0.333,0"
+                       FontFamily="Gotham Medium"
+                       Opacity="0.5" FontSize="11"/>
+
+            <TextBox BorderBrush="#757575" BorderThickness="1" Margin="60,3,73.667,0" Height="23">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="4" Margin="0,10,0,0">
+            <TextBlock Text="Password" Margin="60,0,0,0"
+                       FontFamily="Gotham Medium"
+                       Opacity="0.5" FontSize="11"/>
+
+            <TextBox BorderBrush="#757575" BorderThickness="1" Margin="60,3,73.667,0" Height="23">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="4" Content="Create an Acccount"
+                    FontFamily="Gotham Medium"
+                    Width="123" Height="30"
+                    FontSize="10" Foreground="White" BorderBrush="Transparent" RenderTransformOrigin="0.423,-0.328" Grid.RowSpan="2">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value=" 5"/>
+                </Style>
+
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#c79bf5"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#52c430"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Resources>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-78" Y="4"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <Button  Grid.Column="1" Grid.Row="4" Content="Sign Up With Google"
+                    FontFamily="Gotham Medium"
+                    Width="123" Height="30"
+                    FontSize="10" Foreground="Black" BorderBrush="Black" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value=" 3"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Style>
+
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#52c430"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Resources>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="62" Y="4"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="Already have an account?"
+                   FontFamily="Gotham Book" FontSize="9"
+                   Foreground="#222222" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="140.667,28,140.667,28.667">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-25" Y="-4"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="49" Y="-4"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <Hyperlink FontFamily="Gotham Medium"
+                       FontSize="9" Foreground="#ba7ff6">Log In</Hyperlink>
+        </TextBlock>
+
+    </Grid>
+</Window>
