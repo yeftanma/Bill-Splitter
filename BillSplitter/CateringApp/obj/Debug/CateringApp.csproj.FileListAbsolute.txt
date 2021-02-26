@@ -13,3 +13,7 @@ D:\BillSplitter\CateringApp\obj\Debug\CateringApp.csproj.GenerateResource.cache
 D:\BillSplitter\CateringApp\obj\Debug\CateringApp.csproj.CoreCompileInputs.cache
 D:\BillSplitter\CateringApp\obj\Debug\CateringApp.exe
 D:\BillSplitter\CateringApp\obj\Debug\CateringApp.pdb
+D:\BillSplitter\CateringApp\obj\Debug\LoginPage.g.cs
+D:\BillSplitter\CateringApp\obj\Debug\SignUpPage.g.cs
+D:\BillSplitter\CateringApp\obj\Debug\LoginPage.baml
+D:\BillSplitter\CateringApp\obj\Debug\SignUpPage.baml

@@ -16,13 +16,25 @@ using System.Windows.Shapes;
 namespace CateringApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Page
     {
-        public MainWindow()
+        public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void pwd_TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            pwd_TextBox.Text = "";
+            pwd_TextBox.GotFocus -= pwd_TextBox_GotFocus;
+        }
+
+        private void uname_TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            uname_TextBox.Text = "";
+            uname_TextBox.GotFocus -= uname_TextBox_GotFocus;
         }
     }
 }
