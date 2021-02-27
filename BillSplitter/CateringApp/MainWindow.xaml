@@ -7,5 +7,5 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" ResizeMode="CanMinimize">
 
-    <Frame Source="/SignUpPage.xaml"></Frame>
+    <Frame Content="{Binding Frame}" NavigationUIVisibility="Hidden"></Frame>
 </Window>

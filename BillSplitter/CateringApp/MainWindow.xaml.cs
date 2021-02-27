@@ -20,9 +20,14 @@ namespace CateringApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static Frame Frame { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+            Frame = new Frame();
+            Frame.Content = new SignUpPage();
+          
         }
     }
 }

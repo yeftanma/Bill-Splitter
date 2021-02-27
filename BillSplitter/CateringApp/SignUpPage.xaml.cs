@@ -23,6 +23,7 @@ namespace CateringApp
         public SignUpPage()
         {
             InitializeComponent();
+            DataContext = new SignUpVM();
         }
 
         private void pwd_TextBox_GotFocus(object sender, RoutedEventArgs e)
