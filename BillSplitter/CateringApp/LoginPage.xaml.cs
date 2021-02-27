@@ -23,6 +23,7 @@ namespace CateringApp
         public LoginPage()
         {
             InitializeComponent();
+            DataContext = new LoginVM();
         }
 
         private void pwd_TextBox_GotFocus(object sender, RoutedEventArgs e)
