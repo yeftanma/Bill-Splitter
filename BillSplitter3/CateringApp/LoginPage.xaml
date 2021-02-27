@@ -1,0 +1,269 @@
+﻿<Page x:Class="CateringApp.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CateringApp"
+      mc:Ignorable="d"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Grid Background="White">
+        <Border Grid.ColumnSpan="3"
+                Grid.RowSpan="9">
+            
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.704,1.5"
+                                     StartPoint="0.504, 0.01">
+                    <GradientStop Color="#ffffff"
+                                  Offset="-0.2" />
+                    <GradientStop Color="#c79bf5"
+                                  Offset="0.723" />
+                </LinearGradientBrush>
+                
+            </Border.Background>
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="10"/>
+            </Border.Effect>
+            
+        </Border>
+
+        <Border Grid.Column="1"
+                Grid.Row="1"
+                Grid.RowSpan="7"
+                Background="White"
+                CornerRadius="15"
+                >
+        </Border>
+
+        <Button Grid.Column="1"
+                Grid.Row="1"
+                HorizontalAlignment="Left"
+                Content="BACK"
+                Background="Transparent"
+                VerticalAlignment="Center"
+                Foreground="#d55c92"
+                FontWeight="Bold"
+                BorderBrush="Transparent"
+                RenderTransformOrigin="0.5,0.5"
+                FontFamily="Gotham Bold"
+                Command="{Binding BackBtn}">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform X="20" />
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="2"
+                   Text="WELCOME BACK"
+                   FontFamily="Gotham Bold"
+                   Opacity="0.6"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom">
+        </TextBlock>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="3"
+                   Text="LOG INTO YOUR ACCOUNT"
+                   FontFamily="Gotham Black"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform Y="-5" />
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="4"
+                    Margin="0,8,0,0">
+            <TextBlock Text="Username"
+                       Margin="60,0,0,0"
+                       FontFamily="Gotham Medium"
+                       Opacity="0.7"
+                       FontSize="11"
+                       Foreground="Black" />
+
+            <TextBox x:Name="uname_TextBox"
+                     BorderBrush="#757575"
+                     BorderThickness="1"
+                     Margin="60,3,60,0"
+                     Height="30"
+                     Text="Type your username here..."
+                     TextAlignment="Left"
+                     FontFamily="Gotham"
+                     FontStyle="Italic"
+                     Foreground="#919191"
+                     VerticalContentAlignment="Center"
+                     FontSize="10"
+                     GotFocus="uname_TextBox_GotFocus">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius"
+                                Value="3" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="5"
+                    Margin="0,5,0,0">
+            <TextBlock Text="Password"
+                       Margin="60,0,0,0"
+                       FontFamily="Gotham Medium"
+                       Opacity="0.7"
+                       FontSize="11"
+                       Foreground="Black" />
+
+            <TextBox x:Name="pwd_TextBox"
+                     BorderBrush="#757575"
+                     BorderThickness="1"
+                     Margin="60,3,60,0"
+                     Height="30"
+                     Text="Type your password here..."
+                     TextAlignment="Left"
+                     FontFamily="Gotham"
+                     FontStyle="Italic"
+                     Foreground="#919191"
+                     VerticalContentAlignment="Center"
+                     FontSize="10"
+                     GotFocus="pwd_TextBox_GotFocus">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius"
+                                Value="3" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+
+        <TextBlock Grid.Row="5"
+                   Grid.Column="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform X="87"
+                                        Y="-20" />
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <Hyperlink FontFamily="Gotham Book"
+                       FontSize="7"
+                       Foreground="Black">Forgot Password?</Hyperlink>
+        </TextBlock>
+
+        <Button Grid.Column="1"
+                Grid.Row="5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderBrush="Transparent"
+                Background="White"
+                RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform X="107"
+                                        Y="3" />
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Image 
+                Source="eyes-icon.png"
+                   Width="10">
+            </Image>
+        </Button>
+
+        <Button Grid.Column="1"
+                Grid.Row="6"
+                Content="Login"
+                FontFamily="Gotham Medium"
+                VerticalAlignment="Top"
+                Width="83"
+                Height="30"
+                FontSize="15"
+                Foreground="White"
+                BorderBrush="Transparent"
+                Command="{Binding LoginBtn}">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius"
+                            Value=" 4" />
+                </Style>
+
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background"
+                            Value="#c79bf5" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="#52c430" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <TextBlock Grid.Row="7"
+                   Grid.Column="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Margin="150,0,150,5.667">
+            <Hyperlink FontFamily="Gotham Book"
+                       FontSize="7"
+                       Command="{Binding IssueBtn}"
+                       Foreground="#ba7ff6">Have an issues?</Hyperlink>
+        </TextBlock>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.6*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1.7*" />
+            <RowDefinition Height="1.7*" />
+            <RowDefinition Height="1.7*" />
+            <RowDefinition Height="1.*" />
+            <RowDefinition Height="1.5*" />
+        </Grid.RowDefinitions>
+
+
+    </Grid>
+
+</Page>
