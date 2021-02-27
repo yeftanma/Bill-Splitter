@@ -180,7 +180,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Image 
-                Source="resources/eyes-icon.png"
+                Source="eyes-icon.png"
                    Width="10">
             </Image>
         </Button>

@@ -28,7 +28,8 @@
 
         <Border Background="#dfd3eb"
                 Grid.RowSpan="7"></Border>
-        <Image Source="resources/Login-Icon.png" Grid.RowSpan="7"></Image>
+        <Image Source="Login-icon.png"
+               Grid.RowSpan="7"></Image>
 
         <ComboBox Grid.Column="1"
                   Grid.Row="0"
@@ -80,18 +81,19 @@
                        FontSize="11" />
 
             <TextBox x:Name="uname_TextBox"
+                     Text="{Binding Username}"
                      BorderBrush="#757575"
                      BorderThickness="1"
                      Margin="60,3,73.667,0"
                      Height="30"
-                     Text="Type your username here..."
                      TextAlignment="Left"
                      FontFamily="Gotham"
                      FontStyle="Italic"
                      Foreground="#919191"
                      VerticalContentAlignment="Center"
                      FontSize="10"
-                     GotFocus="uname_TextBox_GotFocus">
+                     GotFocus="uname_TextBox_GotFocus"
+                     >
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"
@@ -115,14 +117,15 @@
                      BorderThickness="1"
                      Margin="60,3,73.667,0"
                      Height="30"
-                     Text="Ex: yourname@gmail.com"
+                     Text="{Binding Email}"
                      TextAlignment="Left"
                      FontFamily="Gotham"
                      FontStyle="Italic"
                      Foreground="#919191"
                      VerticalContentAlignment="Center"
                      FontSize="10"
-                     GotFocus="email_TextBox_GotFocus">
+                     GotFocus="email_TextBox_GotFocus"
+                     >
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"
@@ -146,14 +149,15 @@
                      BorderThickness="1"
                      Margin="60,3,73.667,0"
                      Height="30"
-                     Text="Type your password here..."
+                     Text="{Binding Password}"
                      TextAlignment="Left"
                      FontFamily="Gotham"
                      FontStyle="Italic"
                      Foreground="#919191"
                      VerticalContentAlignment="Center"
                      FontSize="10"
-                     GotFocus="pwd_TextBox_GotFocus">
+                     GotFocus="pwd_TextBox_GotFocus"
+                    >
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius"

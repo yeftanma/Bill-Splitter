@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="CommandHandler.cs" />
     <Compile Include="LoginVM.cs" />
+    <Compile Include="ObservableObject.cs" />
     <Compile Include="SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
@@ -113,6 +114,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="google-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="eyes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="res\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Login UI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sign Up UI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Login-Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

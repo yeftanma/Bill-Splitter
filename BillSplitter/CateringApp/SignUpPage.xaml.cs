@@ -20,28 +20,40 @@ namespace CateringApp
     /// </summary>
     public partial class SignUpPage : Page
     {
+        private SignUpVM vm;
         public SignUpPage()
         {
             InitializeComponent();
-            DataContext = new SignUpVM();
-        }
-
-        private void pwd_TextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            pwd_TextBox.Text = "";
-            pwd_TextBox.GotFocus -= pwd_TextBox_GotFocus;
-        }
-
-        private void email_TextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            email_TextBox.Text = "";
-            email_TextBox.GotFocus -= email_TextBox_GotFocus;
+            vm = new SignUpVM();
+            DataContext = vm;
         }
 
         private void uname_TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            uname_TextBox.Text = "";
-            uname_TextBox.GotFocus -= uname_TextBox_GotFocus;
+            if (vm.Username == "Ex: abc2021")
+            {
+                uname_TextBox.Text = string.Empty;
+            }
+     
+            
+
+        }
+
+        private void pwd_TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (vm.Password == "Type your password here...")
+            {
+                pwd_TextBox.Text = string.Empty;
+            }
+        }
+
+        private void email_TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+            if (vm.Email == "Ex: yourname@gmail.com")
+            {
+                email_TextBox.Text = string.Empty;
+            }
         }
     }
 }
